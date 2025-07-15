@@ -26,9 +26,10 @@ For help and support regarding the script itself and **not the official Pterodac
 ### Automated installation
 
 This repository includes `auto_install.sh` for a minimal setup. The script
-prompts only for an admin username and panel hostname, then downloads the
-latest installer files and configures both panel and wings using default
-values.
+
+prompts only for an admin username and panel hostname, then configures both
+panel and wings using default values.
+
 
 ## Supported installations
 
