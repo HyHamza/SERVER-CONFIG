@@ -23,6 +23,12 @@ Read more about [Pterodactyl](https://pterodactyl.io/) here. This script is not 
 
 For help and support regarding the script itself and **not the official Pterodactyl project**, you can join the [Discord Chat](https://pterodactyl-installer.se/discord).
 
+### Automated installation
+
+This repository includes `auto_install.sh` for a minimal setup. The script
+prompts only for an admin username and panel hostname, then configures both
+panel and wings using default values.
+
 ## Supported installations
 
 List of supported installation setups for panel and Wings (installations supported by this installation script).
