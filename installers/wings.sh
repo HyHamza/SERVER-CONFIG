@@ -133,13 +133,15 @@ systemd_file() {
 }
 
 firewall_ports() {
-  output "Opening port 22 (SSH), 8080 (Wings Port), 2022 (Wings SFTP Port)"
+  output "Opening port 22 (SSH), 22022 (Alt SSH), 8080 (Wings Port), 2022 (Wings SFTP Port)"
 
   [ "$CONFIGURE_LETSENCRYPT" == true ] && firewall_allow_ports "80 443"
   [ "$CONFIGURE_DB_FIREWALL" == true ] && firewall_allow_ports "3306"
 
   firewall_allow_ports "22"
   output "Allowed port 22"
+  firewall_allow_ports "22022"
+  output "Allowed port 22022"
   firewall_allow_ports "8080"
   output "Allowed port 8080"
   firewall_allow_ports "2022"
