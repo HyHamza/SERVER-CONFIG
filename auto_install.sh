@@ -155,7 +155,9 @@ else
   fi
 
   echo "* Installation completed successfully"
+  echo "* Admin Username: $USERNAME"
   echo "* Admin Email: $ADMIN_EMAIL"
+  echo "* Admin Password: $PANEL_USER_PASSWORD"
   [[ "$INSTALL_PANEL" == true ]] && echo "* Panel FQDN: $PANEL_FQDN"
   [[ "$INSTALL_WINGS" == true ]] && echo "* Wings FQDN: $WINGS_FQDN"
   [[ "$INSTALL_PANEL" == true ]] && echo "* Database Password: $DB_PASSWORD"
