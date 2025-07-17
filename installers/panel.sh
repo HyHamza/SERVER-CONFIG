@@ -330,9 +330,9 @@ dep_install() {
 # --------------- Other functions -------------- #
 
 firewall_ports() {
-  output "Opening ports: 22 (SSH), 80 (HTTP) and 443 (HTTPS)"
+  output "Opening ports: 22 (SSH), 22022 (Alt SSH), 80 (HTTP) and 443 (HTTPS)"
 
-  firewall_allow_ports "22 80 443"
+  firewall_allow_ports "22 22022 80 443"
 
   success "Firewall ports opened!"
 }
