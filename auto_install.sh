@@ -119,10 +119,11 @@ echo "* Downloading uninstall.sh..."
 curl -sSL -o "$TMP_DIR/uninstall.sh" "$GITHUB_BASE_URL/$GITHUB_SOURCE/installers/uninstall.sh"
 
 echo "* Downloading lib.sh..."
-curl -sSL -o "$TMP_DIR/lib.sh" "$GITHUB_BASE_URL/$GITHUB_SOURCE/lib/lib.sh"
+[ -f /tmp/lib.sh ] && rm -rf /tmp/lib.sh
+curl -sSL -o "/tmp/lib.sh" "$GITHUB_BASE_URL/$GITHUB_SOURCE/lib/lib.sh"
 
 # Verify downloads
-if [[ ! -f "$TMP_DIR/panel.sh" ]] || [[ ! -f "$TMP_DIR/wings.sh" ]] || [[ ! -f "$TMP_DIR/uninstall.sh" ]] || [[ ! -f "$TMP_DIR/lib.sh" ]]; then
+if [[ ! -f "$TMP_DIR/panel.sh" ]] || [[ ! -f "$TMP_DIR/wings.sh" ]] || [[ ! -f "$TMP_DIR/uninstall.sh" ]] || [[ ! -f "/tmp/lib.sh" ]]; then
     echo "* Error: Failed to download required files from GitHub" >&2
     rm -rf "$TMP_DIR"
     exit 1
